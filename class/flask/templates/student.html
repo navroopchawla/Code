@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <form name="myform" action = "http://localhost:5000/result" method = "POST" onsubmit= "return validateform()">
+            <p>
+                Name <input type = "text" name = "Name"/>
+            </p>
+            <p>
+                Physics <input type = "text" name = "Physics"/>
+            </p>
+            <p>
+                Chemistry <input type = "text" name = "Chemistry"/>
+            </p>
+            <p>
+                Maths <input type="text" name="Maths" />
+            </p>
+            <p>
+                <input type = "submit" value = "submit" />
+            </p>
+        </form>
+    </body>
+</html>
+
+<script>
+    function validateform(){
+        var name=document.myform.name.value;
+        var Physics=document.myform.Physics.value;
+
+        if(Name==null){
+            alert("Name can't be Blank");
+            return false;
+        }else if(Physics.length<6){
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+    }
+</script>
